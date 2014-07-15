@@ -56,7 +56,7 @@ class uther(Frame):
 		ts.rotation=270
 		ts.show_leaf_name=True
 		t = Tree(newick='('+tree.head.getKids('Start')+');', format=0)
-		t.render(file_name="uther.svg",tree_style=ts)
+		t.render(file_name="MysteryBox.svg",tree_style=ts)
 class MinMax:
 	def __init__(self,players, timer):
 		self.numPlayers = players-1
@@ -126,8 +126,8 @@ if ((len(sys.argv) == 2 and sys.argv[1] == '-cmd')):
 		ts.rotation=270
 		ts.show_leaf_name=True
 		t = Tree(newick='('+tree.head.getKids('Start')+');', format=0)
-		t.render(file_name="uther.svg",tree_style=ts)
-		print "Saved graph to uther.svg"
+		t.render(file_name="MysteryBox.svg",tree_style=ts)
+		print "Saved graph to MysteryBox.svg"
 elif (len(sys.argv) == 2 and sys.argv[1] == '-gui'):
 		#Adjust sys.path so we can find other modules of this project
 		import sys
@@ -144,7 +144,7 @@ elif (len(sys.argv) == 2 and sys.argv[1] == '-gui'):
 			App.pack(expand='yes',fill='both')
 
 			Root.geometry('360x150+10+10')
-			Root.title('uther')
+			Root.title('Mystery Box Solver')
 			Root.mainloop()
 elif ((len(sys.argv) == 4) and sys.argv[1] == '-ni'):
 	players = int(sys.argv[2])
@@ -162,7 +162,7 @@ elif ((len(sys.argv) == 4) and sys.argv[1] == '-ni'):
 		ts.rotation=270
 		ts.show_leaf_name=True
 		t = Tree(newick='('+tree.head.getKids('Start')+');', format=0)
-		t.render(file_name="uther.svg",tree_style=ts)
-		print "Saved graph to uther.svg"
+		t.render(file_name="MysteryBox.svg",tree_style=ts)
+		print "Saved graph to MysteryBox.svg"
 else:
 	print 'USAGE: uther.py <flag> [players] [time]\n\n\t\tflags:\n\t\t-cmd: \tUse text prompt interface\n\t\t-gui: \tUse GUI interface\n\t\t-ni: \tUse no interface, must follow by number \n\t\t\tof players and number of turns'
